@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: giggle-sniper
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app
+    envVars:
+      - key: API_KEY
+        value: FBVZ6FPYH5AZPM8D6M4617C3N5RM2DXNFJ
+      - key: BOT_TOKEN
+        value: 7461003760:AAEL2szEBQ96AtYgo1HlnqFjuQ_VIA33DG4
+      - key: CHAT_ID
+        value: 1063182207
